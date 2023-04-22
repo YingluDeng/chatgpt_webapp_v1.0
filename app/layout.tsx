@@ -10,6 +10,7 @@ export const metadata = {
   description: 'ChatGPT Clone WebApp Header Title',
 }
 
+
 //log in -- has a session; log out -- no session
 export default async function RootLayout({
   children,
@@ -17,7 +18,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const session = await getServerSession(authOptions)
-
+  console.log(session);
   return (
     <html>
       <body>
