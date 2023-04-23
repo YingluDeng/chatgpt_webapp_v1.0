@@ -4,6 +4,7 @@ import { SessionProvider } from '../components/SessionProvider'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '../pages/api/auth/[...nextauth]'
 import Login from '@/components/Login'
+import ClientProvider from '../components/ClientProvider'
 
 export const metadata = {
   title: 'ChatGPT Clone WebApp',
@@ -18,7 +19,8 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const session = await getServerSession(authOptions)
-  console.log(session);
+  // console.log(session); check the info
+
   return (
     <html>
       <body>
@@ -33,6 +35,7 @@ export default async function RootLayout({
               </div>
 
               {/* clientProvider notification */}
+              <ClientProvider />
 
               <div className="bg-[#343541] flex-1">{children}</div>
             </div>  

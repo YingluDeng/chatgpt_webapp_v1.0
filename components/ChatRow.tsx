@@ -22,10 +22,11 @@ function ChatRow({id} : Props) {
         collection(db, "users", session?.user?.email!, "chats", id, "messages")
     );
 
-    // const removeChat = async() => {
-    //     await deleteDoc(doc(db, 'users', session?.user?.email!, 'chats', id));
-    //     router.replace("/");
-    // }
+    const removeChat = async() => {
+        await deleteDoc(doc(db, 'users', session?.user?.email!, 'chats', id));
+        router.replace("/");
+    }
+
     useEffect(() => {
         if (!pathname) return;
 
@@ -40,8 +41,7 @@ function ChatRow({id} : Props) {
         >
             <ChatBubbleLeftIcon className="h-5 w-5" />
             <p className="flex-1 hidden md:inline-flex truncare">{messages?.docs[messages?.docs.length - 1]?.data().text || "New Chat"}</p>
-            <TrashIcon  className="h-5 w-5 text-white hover:text-red-700" />   
-            {/* onClick={removeChat} */}
+            <TrashIcon onClick={removeChat} className="h-5 w-5 text-white hover:text-red-700" />   
         </Link>
     )
 }
