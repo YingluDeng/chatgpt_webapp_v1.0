@@ -4,6 +4,7 @@ import { db } from "@/firebase";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
+import dynamic from "next/dynamic";
 import { useState, FormEvent } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -12,12 +13,16 @@ type Props = {
     chatId: string;
 }
 
-//TODO: useSWR to get model
-const model = "text-davinci-003";
+
 
 function ChatInput({ chatId }: Props) {
     const [prompt, setPrompt] = useState("");
     const { data: session } = useSession();
+
+    //TODO: useSWR to get model
+    const model = "text-davinci-003";
+
+    const notify = () => toast('Here is your toast.');
 
     const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -37,13 +42,12 @@ function ChatInput({ chatId }: Props) {
         }
 
         await addDoc(
-            collection(db, "users", session?.user?.email!, "chats", chatId, "messages"),
+            collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'),
             message
-        );
+        )
 
         // notification loading
-        // const notification = toast.loading('Loading');
-        toast.success('Successfully toasted!');
+        const notification = toast.loading('Loading');
 
         await fetch("/api/askQuestion", {
             method: "POST",
@@ -58,19 +62,18 @@ function ChatInput({ chatId }: Props) {
             }),
         }).then(() => {
             // notification to say successful!
-            // toast.success('ChatGPT has responded!', {
-            //     id: notification,
-            // })
-
-
-            // toast.success('Successfully toasted!')
+            toast.success('ChatGPT has responded!', {
+                id: notification,
+            })
         });
+
+
+        <Toaster />
     };
 
     return (
         <div className="bg-gray-700/50 text-white rounded-lg text-sm">
-            
-            <form onSubmit={e => sendMessage} className="p-5 space-x-5 flex">
+            <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
                 <input 
                     className="
                         bg-transparent 
