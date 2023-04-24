@@ -13,16 +13,12 @@ type Props = {
     chatId: string;
 }
 
-
-
 function ChatInput({ chatId }: Props) {
     const [prompt, setPrompt] = useState("");
     const { data: session } = useSession();
 
     //TODO: useSWR to get model
     const model = "text-davinci-003";
-
-    const notify = () => toast('Here is your toast.');
 
     const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -38,8 +34,8 @@ function ChatInput({ chatId }: Props) {
                 _id: session?.user?.email!,
                 name: session?.user?.name!,
                 avatar: session?.user?.image! || `https://ui-avatars.com/api/?name=${session?.user?.name}`,
-            }
-        }
+            },
+        };
 
         await addDoc(
             collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'),
@@ -47,12 +43,12 @@ function ChatInput({ chatId }: Props) {
         )
 
         // notification loading
-        const notification = toast.loading('Loading');
+        const notification = toast.loading('Sending...');
 
-        await fetch("/api/askQuestion", {
-            method: "POST",
+        await fetch('/api/askQuestion', {
+            method: 'POST',
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 prompt: input,
@@ -61,14 +57,20 @@ function ChatInput({ chatId }: Props) {
                 session,
             }),
         }).then(() => {
-            // notification to say successful!
-            toast.success('ChatGPT has responded!', {
-                id: notification,
-            })
+            toast.success('Sent successfully.', {
+                id: notification
+                // style: {
+                //     borderRadius: '10px',
+                //     background: '#fff',
+                //     color: '#6094d0',
+                // },
+                // iconTheme: {
+                //   primary: '#e35a74',
+                //   secondary: '#fff',
+                // },
+            }) 
         });
-
-
-        <Toaster />
+        // <Toaster />
     };
 
     return (

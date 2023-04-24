@@ -22,17 +22,16 @@ function ChatRow({id} : Props) {
         collection(db, "users", session?.user?.email!, "chats", id, "messages")
     );
 
-    const removeChat = async() => {
-        await deleteDoc(doc(db, 'users', session?.user?.email!, 'chats', id));
-        router.replace("/");
-    }
-
     useEffect(() => {
         if (!pathname) return;
 
         setActive(pathname.includes(id));
     }, [pathname]);
-    
+
+    const removeChat = async() => {
+        await deleteDoc(doc(db, 'users', session?.user?.email!, 'chats', id));
+        router.replace("/");
+    };
 
     return (
         <Link

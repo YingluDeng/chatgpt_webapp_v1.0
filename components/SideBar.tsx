@@ -5,22 +5,22 @@ import { useSession, signOut } from "next-auth/react";
 import NewChat from "./NewChat"
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "@/firebase";
-import { collection } from "@firebase/firestore";
+import { collection, query, orderBy } from "@firebase/firestore";
 import ChatRow from "./ChatRow";
 
 function SideBar() {
     const { data: session } = useSession();
     const [ chats, loadind, error ] = useCollection(
         session &&  //session should exist
-    //     query(
+        query(
             collection(db, "users", session.user?.email!, "chats"), //grab the chat
-    //         orderBy("createdAt", "asc")
-            )
-    // );
+            orderBy("createdAt", "asc")
+        )
+    );
 
     // console.log(chats);
     return (
-        <div className="p-2 flex flex-col h-screen text-white">
+        <div className="p-2 flex flex-col h-screen text-white font-mono">
             <div className="flex-1">
                 <div>
                     {/* new Chat */}
