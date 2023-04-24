@@ -6,7 +6,7 @@ import admin from "firebase-admin";
 // import chat_logo from "../pic/ChatGPT_logo.png"
 
 type Data = {
-  answer: string
+  respond: string
 }
 
 export default async function handler(
@@ -16,17 +16,18 @@ export default async function handler(
     const {prompt, chatId, model, session } = req.body;
 
     if (!prompt) {
-        res.status(400).json({ answer: "Please provide a prompt!" });
+        res.status(400).json({ respond: "Please provide a prompt!" });
         return;
     }
 
     if (!chatId) {
-        res.status(400).json({ answer: "Please provide a valid chat ID!" });
+        res.status(400).json({ respond: "Please provide a valid chat ID!" });
         return;
     }
 
     // chatgpt query
     const response = await query(prompt, chatId, model);
+    console.log('askQuestion page debug');
 
     const message: Message = {
         text: response || "ChatGPT was unable to answer that.",
@@ -46,5 +47,5 @@ export default async function handler(
         .collection('messages')
         .add(message);
 
-  res.status(200).json({ answer: message.text })
+  res.status(200).json({ respond: message.text })
 }

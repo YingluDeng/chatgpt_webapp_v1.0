@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains:['links.papareact.com']
+    domains:['drive.google.com']
   },
   experimental: {
     appDir: true, 
@@ -10,17 +10,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   reactStrictMode: true,
-//   images: {
-//     domains:['links.papareact.com']
-//   },
-//   experimental: {
-//     appDir: true, 
-//   }
-// }
-
-// module.exports = nextConfig

@@ -1,10 +1,10 @@
-'use client'
+'use client';
 
 import { db } from "@/firebase";
 import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useSession } from "next-auth/react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { useState, FormEvent } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -15,6 +15,7 @@ type Props = {
 
 function ChatInput({ chatId }: Props) {
     const [prompt, setPrompt] = useState("");
+    const [loading, setIsLoading] = useState(true);
     const { data: session } = useSession();
 
     //TODO: useSWR to get model
@@ -22,55 +23,62 @@ function ChatInput({ chatId }: Props) {
 
     const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (!prompt) return;
+        try {
+            if (!prompt) return;
+            
+            const input = prompt.trim();  
+            setPrompt("");
 
-        const input = prompt.trim();  
-        setPrompt("");
+            setIsLoading(false);
 
-        const message: Message = {
-            text: input,
-            createdAt: serverTimestamp(),
-            user: {
-                _id: session?.user?.email!,
-                name: session?.user?.name!,
-                avatar: session?.user?.image! || `https://ui-avatars.com/api/?name=${session?.user?.name}`,
-            },
-        };
+            const message: Message = {
+                text: input,
+                createdAt: serverTimestamp(),
+                user: {
+                    _id: session?.user?.email!,
+                    name: session?.user?.name!,
+                    avatar: session?.user?.image! || `https://ui-avatars.com/api/?name=${session?.user?.name}`,
+                },
+            };
 
-        await addDoc(
-            collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'),
-            message
-        )
+            await addDoc(
+                collection(db, 'users', session?.user?.email!, 'chats', chatId, 'messages'),
+                message
+            )
 
-        // notification loading
-        const notification = toast.loading('Sending...');
+            // notification loading
+            const notification = toast.loading('Sending...');
 
-        await fetch('../pages/api/auth/askQuestion', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                prompt: input,
-                chatId, 
-                model, 
-                session,
-            }),
-        }).then(() => {
-            toast.success('Sent successfully.', {
-                id: notification
-                // style: {
-                //     borderRadius: '10px',
-                //     background: '#fff',
-                //     color: '#6094d0',
-                // },
-                // iconTheme: {
-                //   primary: '#e35a74',
-                //   secondary: '#fff',
-                // },
-            }) 
-        });
-        <Toaster />
+            await fetch('../pages/api/auth/askQuestion', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    prompt: input,
+                    chatId, 
+                    model, 
+                    session,
+                }),
+            }).then(() => {
+                toast.success('Sent successfully.', {
+                    id: notification
+                    // style: {
+                    //     borderRadius: '10px',
+                    //     background: '#fff',
+                    //     color: '#6094d0',
+                    // },
+                    // iconTheme: {
+                    //   primary: '#e35a74',
+                    //   secondary: '#fff',
+                    // },
+                });
+                setIsLoading(true);
+            });
+            // <Toaster />
+        } catch (error: any) {
+            console.log(error.message);
+        }
     };
 
     return (
