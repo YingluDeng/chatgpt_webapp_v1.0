@@ -23,6 +23,7 @@ function ChatInput({ chatId }: Props) {
 
     const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
         try {
             if (!prompt) return;
             
@@ -48,8 +49,8 @@ function ChatInput({ chatId }: Props) {
 
             // notification loading
             const notification = toast.loading('Sending...');
-
-            await fetch('../pages/api/auth/askQuestion', {
+            
+            await fetch('/api/askQuestion', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -62,16 +63,16 @@ function ChatInput({ chatId }: Props) {
                 }),
             }).then(() => {
                 toast.success('Sent successfully.', {
-                    id: notification
-                    // style: {
-                    //     borderRadius: '10px',
-                    //     background: '#fff',
-                    //     color: '#6094d0',
-                    // },
-                    // iconTheme: {
-                    //   primary: '#e35a74',
-                    //   secondary: '#fff',
-                    // },
+                    id: notification,
+                    style: {
+                        borderRadius: '10px',
+                        background: '#fff',
+                        color: '#6094d0',
+                    },
+                    iconTheme: {
+                      primary: '#e35a74',
+                      secondary: '#fff',
+                    },
                 });
                 setIsLoading(true);
             });
