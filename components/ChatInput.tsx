@@ -45,7 +45,7 @@ function ChatInput({ chatId }: Props) {
         // notification loading
         const notification = toast.loading('Sending...');
 
-        await fetch('/api/askQuestion', {
+        await fetch('../pages/api/auth/askQuestion', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ function ChatInput({ chatId }: Props) {
                 // },
             }) 
         });
-        // <Toaster />
+        <Toaster />
     };
 
     return (
