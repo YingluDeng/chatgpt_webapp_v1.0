@@ -74,7 +74,13 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 <img src="./gif/modelSelection.gif" alt="login recording" height="500">
   
 ### Send Message and Get Respond
-<img src="./gif/login_auth.gif" alt="login recording" height="500">
+<img src="./gif/messages.gif" alt="login recording" height="500">
   
 ### Notification Toast
-<img src="./gif/login_auth.gif" alt="login recording" height="500">
+<img src="./gif/toast.gif" alt="login recording" height="500">
+
+<br />
+
+
+
+ 
