@@ -115,34 +115,24 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
   
 
 ### Frontend:
-<a href="https://flexboxfroggy.com/" target="_blank">🔗 A game for learning CSS flexbox. </a>
-  
-<a href="https://heroicons.com/" target="_blank">🔗 Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS. </a>
-  
-<a href="https://ui-avatars.com/" target="_blank">🔗 Generate avatars with initials from names.</a>
-  
-<a href="https://react-hot-toast.com/" target="_blank">🔗 Add beautiful notifications to your React app with react-hot-toast.</a>
-  
-<a href="https://textfixer.com/" target="_blank">🔗 Remove line breaks online tool.</a>
-  
-<a href="https://react-select.com/" target="_blank">🔗 A flexible and beautiful Select Input control for ReactJS with multiselect, autocomplete, async and creatable support.</a>
+<a href="https://flexboxfroggy.com/" target="_blank">🔗 Flexbox: A game for learning CSS flexbox. </a> <br/>
+<a href="https://heroicons.com/" target="_blank">🔗 Icon: Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS. </a> <br/> 
+<a href="https://ui-avatars.com/" target="_blank">🔗 Avatar: Generate avatars with initials from names.</a> <br/>
+<a href="https://react-hot-toast.com/" target="_blank">🔗 Notification: Add beautiful notifications to your React app with react-hot-toast.</a> <br/>
+<a href="https://textfixer.com/" target="_blank">🔗 Text tool: Remove line breaks online tool.</a> <br/>
+<a href="https://react-select.com/" target="_blank">🔗 Selection Box: A flexible and beautiful Select Input control for ReactJS with multiselect, autocomplete, async and creatable support.</a>
   
   
 ### Backend:
-
-
-authentication - **NextAuth.js** [https://next-auth.js.org/](https://next-auth.js.org/)
-
-real-time database - **firebase v9**
-
-react firebase hooks (connect these two together)
-
-[https://github.com/csfrequency/react-firebase-hooks/tree/09bf06b28c82b4c3c1beabb1b32a8007232ed045/firestore](https://github.com/csfrequency/react-firebase-hooks/tree/09bf06b28c82b4c3c1beabb1b32a8007232ed045/firestore)
-
-[https://swr.vercel.app/](https://swr.vercel.app/)
-
-[https://vercel.com/docs/cli](https://vercel.com/docs/cli)
+<a href="https://next-auth.com/" target="_blank">🔗 Authentication: NextAuth.js is a complete open-source authentication solution for Next.js applications.</a> <br/>
+<a href="https://firebase.google.com/docs/database" target="_blank">🔗 Real-time Database: The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client.</a> <br/>
+<a href="https://firebaseopensource.com/projects/csfrequency/react-firebase-hooks/" target="_blank">🔗 React Firebase Hooks: A set of reusable React Hooks for Firebase..</a> <br/>
+<a href="https://swr.vercel.app/" target="_blank">🔗 useSWR: React Hooks for Data Fetching.</a> <br/>
+<a href="https://vercel.com/docs/cli" target="_blank">🔗 Vercel CLI: Manage and configure your Vercel Projects from the command line.</a> <br/>
   
+  
+[(Back to top)](#table-of-contents)
+
 <br />
 
 
