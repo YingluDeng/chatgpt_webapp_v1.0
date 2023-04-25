@@ -106,14 +106,14 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 <!-- Getting Started -->
 ## Getting Started
 
-
+  
+  
+  
 
 <br />
 
 <!-- Useful Resource -->
 ## Useful Resource
-  
-
 ### Frontend:
 <a href="https://flexboxfroggy.com/" target="_blank">🔗 Flexbox: A game for learning CSS flexbox. </a> <br/>
 <a href="https://heroicons.com/" target="_blank">🔗 Icon: Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS. </a> <br/> 
@@ -122,14 +122,12 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 <a href="https://textfixer.com/" target="_blank">🔗 Text tool: Remove line breaks online tool.</a> <br/>
 <a href="https://react-select.com/" target="_blank">🔗 Selection Box: A flexible and beautiful Select Input control for ReactJS with multiselect, autocomplete, async and creatable support.</a>
   
-  
 ### Backend:
 <a href="https://next-auth.com/" target="_blank">🔗 Authentication: NextAuth.js is a complete open-source authentication solution for Next.js applications.</a> <br/>
 <a href="https://firebase.google.com/docs/database" target="_blank">🔗 Real-time Database: The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client.</a> <br/>
 <a href="https://firebaseopensource.com/projects/csfrequency/react-firebase-hooks/" target="_blank">🔗 React Firebase Hooks: A set of reusable React Hooks for Firebase..</a> <br/>
 <a href="https://swr.vercel.app/" target="_blank">🔗 useSWR: React Hooks for Data Fetching.</a> <br/>
 <a href="https://vercel.com/docs/cli" target="_blank">🔗 Vercel CLI: Manage and configure your Vercel Projects from the command line.</a> <br/>
-  
   
 [(Back to top)](#table-of-contents)
 
