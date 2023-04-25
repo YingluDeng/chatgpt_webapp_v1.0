@@ -15,12 +15,19 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 
 
 
-<!-- Table of Contents -->
-## 📍 Table of Contents
+<!-- Table of contents -->
+## Table of Contents
 
 - [About the Project](#star2-about-the-project)
   - [Tech Stack](#tech-stack)
   - [Application Features](#application-features)
+    - [Homepage](#homepage)
+    - [Log In](#log-in)
+    - [Log Out](#log-out)
+    - [Create and Delete Chat](#create-and-delete-chat)
+    - [Model Selection](#model-selection)
+    - [Notification Toast](#notification-toast)
+    - [Send Message and Get Respond](#send-message-and-get-respond)
   - [Environment Variables](#key-environment-variables)
 - [Getting](#toolbox-getting-started)
   - [Prerequisites](#bangbang-prerequisites)
@@ -52,6 +59,8 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 ### Databases:
 ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
 
+[(Back to top)](#table-of-contents)
+
 <br />
 
 
@@ -60,24 +69,31 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 
 ### Homepage
 <img src="./gif/homepage.gif" alt="homepage recording" height="500">
+[(Back to top)](#table-of-contents)
   
 ### Log In 
 <img src="./gif/login_auth.gif" alt="login recording" height="500">
+[(Back to top)](#table-of-contents)
   
 ### Log Out
 <img src="./gif/logout.gif" alt="login recording" height="500">
+[(Back to top)](#table-of-contents)
   
 ### Create and Delete Chat
 <img src="./gif/chatRow.gif" alt="login recording" height="500">
+[(Back to top)](#table-of-contents)
   
 ### Model Selection
 <img src="./gif/modelSelection.gif" alt="login recording" height="500">
+[(Back to top)](#table-of-contents)
   
 ### Notification Toast
 <img src="./gif/toast.gif" alt="login recording" height="300" width="500">
+[(Back to top)](#table-of-contents)
   
 ### Send Message and Get Respond
 <img src="./gif/messages.gif" alt="login recording" height="500">
+[(Back to top)](#table-of-contents)
 
 
 <br />
