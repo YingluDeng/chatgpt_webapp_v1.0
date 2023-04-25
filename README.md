@@ -112,17 +112,49 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 
 <!-- Useful Resource -->
 ## Useful Resource
-<li><a href="https://flexboxfroggy.com/" target="_blank">🔗 Learn flexbox.</a></li>
+  
 
+### Frontend:
+<a href="https://flexboxfroggy.com/" target="_blank">🔗 A game for learning CSS flexbox. </a>
+  
+<a href="https://heroicons.com/" target="_blank">🔗 Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS. </a>
+  
+<a href="https://ui-avatars.com/" target="_blank">🔗 Generate avatars with initials from names.</a>
+  
+<a href="https://react-hot-toast.com/" target="_blank">🔗 Add beautiful notifications to your React app with react-hot-toast.</a>
+  
+<a href="https://textfixer.com/" target="_blank">🔗 Remove line breaks online tool.</a>
+  
+<a href="https://react-select.com/" target="_blank">🔗 A flexible and beautiful Select Input control for ReactJS with multiselect, autocomplete, async and creatable support.</a>
+  
+  
+### Backend:
+
+
+authentication - **NextAuth.js** [https://next-auth.js.org/](https://next-auth.js.org/)
+
+real-time database - **firebase v9**
+
+react firebase hooks (connect these two together)
+
+[https://github.com/csfrequency/react-firebase-hooks/tree/09bf06b28c82b4c3c1beabb1b32a8007232ed045/firestore](https://github.com/csfrequency/react-firebase-hooks/tree/09bf06b28c82b4c3c1beabb1b32a8007232ed045/firestore)
+
+[https://swr.vercel.app/](https://swr.vercel.app/)
+
+[https://vercel.com/docs/cli](https://vercel.com/docs/cli)
+  
 <br />
 
 
+  
 <!-- Developer -->
 ## Developer
-Cecilia Deng - https://www.linkedin.com/in/yinglu-cecilia-deng/
+**Cecilia Deng** - https://www.linkedin.com/in/yinglu-cecilia-deng/<br/>
+**Project link** - https://chatgpt-webapp-nv.vercel.app/
 
-Project link - https://chatgpt-webapp-nv.vercel.app/
-
-[(Back to top)](#table-of-contents)
+  
 <br />
+  
+[(Back to top)](#table-of-contents)
+
   
