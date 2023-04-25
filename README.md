@@ -59,10 +59,10 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 ## Application Features
 
 ### Homepage
-<img src="./recording/home-page.gif" alt="homepage recording" height="500">
+<img src="./gif/homepage.gif" alt="homepage recording" height="500">
 
 ### Log In 
-<img src="./recording/login-page.gif" alt="login recording" height="500">
+<img src="./gif/login_auth.gif" alt="login recording" height="500">
 
 ### Log Out
 
