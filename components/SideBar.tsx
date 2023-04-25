@@ -31,11 +31,18 @@ function SideBar() {
                         <ModelSelection />
                     </div>
 
-                    {/* chatRow */}
-                    {chats?.docs.map(chat => (
-                        <ChatRow key={chat.id} id={chat.id} />
-                    ))}
+                    <div className="flex flex-col space-y-2 my-2">
+                        { loadind && (
+                            <div className="animate-pulse text-center text-white">
+                                <p>Loading chats...</p>
+                            </div>
+                        )}
 
+                        {/* chatRow */}
+                        {chats?.docs.map(chat => (
+                            <ChatRow key={chat.id} id={chat.id} />
+                        ))}
+                    </div>
                 </div>
             </div>
 

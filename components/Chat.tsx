@@ -6,6 +6,7 @@ import { collection, orderBy, query } from "firebase/firestore";
 import { useSession } from "next-auth/react";
 import { useCollection } from "react-firebase-hooks/firestore";
 import Message from "./Message";
+import ModelSelection from "./ModelSelection";
 
 type Props = {
     chatId: string;
@@ -25,7 +26,8 @@ function Chat({ chatId }: Props) {
     );
 
     return (
-        <div className="flex-1 overflow-y-auto overflow-x-hidden">
+        
+        <div className="flex-1 overflow-y-auto overflow-x-hidden">         
             {message?.empty && (
                 <>
                     <HomePage />

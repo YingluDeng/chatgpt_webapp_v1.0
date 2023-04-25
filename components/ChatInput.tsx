@@ -7,6 +7,11 @@ import { useSession } from "next-auth/react";
 // import dynamic from "next/dynamic";
 import { useState, FormEvent } from "react";
 import toast, { Toaster } from 'react-hot-toast';
+import { useSWRConfig } from "swr";
+import ChatRow from "./ChatRow";
+import ModelSelection from "./ModelSelection";
+import NewChat from "./NewChat";
+import useSWR from "swr";
 
 
 type Props = {
@@ -17,10 +22,12 @@ function ChatInput({ chatId }: Props) {
     const [prompt, setPrompt] = useState("");
     const [loading, setIsLoading] = useState(true);
     const { data: session } = useSession();
-
-    //TODO: useSWR to get model
-    const model = "text-davinci-003";
-
+    
+    //useSWR to get model
+    const {data: model} = useSWR('model', {
+        fallbackData: 'text-davinci-003',
+    });
+ 
     const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
@@ -111,8 +118,11 @@ function ChatInput({ chatId }: Props) {
                 </button>
             </form>
 
-            <div>
+            <div className="md:hidden">
                 {/* ModelSelection */}
+                {/* <NewChat />
+                <ChatRow /> */}
+                <ModelSelection />
             </div>
         </div>
     )
