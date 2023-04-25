@@ -5,15 +5,15 @@ import { SunIcon, BoltIcon, ExclamationTriangleIcon } from '@heroicons/react/24/
 function HomePage() {
     return (
         <div className="flex flex-col items-center justify-center h-screen text-white">
-            <h1 className="text-5xl font-bold mb-20">ChatGPT</h1>
+            <h1 className="text-4xl font-bold mb-20">ChatGPT</h1>
 
-            <div className="flex space-x-2 text-center">
+            <div className="flex space-x-4 text-center">
                 <div>
                     <div className="flex flex-col items-center justify-center mb-5">
                         <SunIcon className="h-8 w-8"/>
                         <h2>Examples</h2>
                     </div>
-                    <div className="space-y-2 ">
+                    <div className="space-y-3 ">
                         <p className="infoBg">"Explain quantum computing in simple terms"</p>
                         <p className="infoBg">"Got any creative ideas for a 10 year old’s birthday?
 "</p>
@@ -26,7 +26,7 @@ function HomePage() {
                         <BoltIcon className="h-8 w-8"/>
                         <h2>Capabilities</h2>
                     </div>
-                    <div className="space-y-2 ">
+                    <div className="space-y-3 ">
                         <p className="infoBg">Remembers what user said earlier in the conversation</p>
                         <p className="infoBg">Allows user to provide follow-up corrections</p>
                         <p className="infoBg">Trained to decline inappropriate requests</p>
@@ -38,7 +38,7 @@ function HomePage() {
                         <ExclamationTriangleIcon className="h-8 w-8"/>
                         <h2>Limitations</h2>
                     </div>
-                    <div className="space-y-2 ">
+                    <div className="space-y-3 ">
                         <p className="infoBg">May occasionally generate incorrect information</p>
                         <p className="infoBg">May occasionally produce harmful instructions or biased content</p>
                         <p className="infoBg">Limited knowledge of world and events after 2021</p>

@@ -64,15 +64,15 @@ function ChatInput({ chatId }: Props) {
             }).then(() => {
                 toast.success('Sent successfully.', {
                     id: notification,
-                    style: {
-                        borderRadius: '10px',
-                        background: '#fff',
-                        color: '#6094d0',
-                    },
-                    iconTheme: {
-                      primary: '#e35a74',
-                      secondary: '#fff',
-                    },
+                    // style: {
+                    //     borderRadius: '10px',
+                    //     background: '#fff',
+                    //     color: '#6094d0',
+                    // },
+                    // iconTheme: {
+                    //   primary: '#e35a74',
+                    //   secondary: '#fff',
+                    // },
                 });
                 setIsLoading(true);
             });
@@ -83,20 +83,20 @@ function ChatInput({ chatId }: Props) {
     };
 
     return (
-        <div className="bg-gray-700/50 text-white rounded-lg text-sm">
+        <div className="bg-[#44465371] text-white rounded-lg text-md"> 
             <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
                 <input 
                     className="
                         bg-transparent 
                         focus:outline-none 
-                        flex-1 
+                        flex-1
                         disabled:cursor-not-allowed 
                         disabled:text-grey-300"
                     disabled={!session}
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
                     type="text" 
-                    placeholder="Send a message..."
+                    placeholder="Send a message."
                 />
 
                 {/* send button */}
@@ -105,7 +105,7 @@ function ChatInput({ chatId }: Props) {
                     type="submit"
                     className="text-gray-200 
                         hover:  px-2 py-1 rounded
-                        disabled:text-gray-600 disabled:cursor-not-allowed"
+                        disabled:text-gray-500 disabled:cursor-not-allowed"
                     >
                     <PaperAirplaneIcon className="h-4 w-4 -rotate-45 " />
                 </button>

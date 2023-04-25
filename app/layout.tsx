@@ -31,7 +31,8 @@ export default async function RootLayout({
             {/* sidebar */}
             {/* bg-[#202123]  */}
             {/* bg-gradient-to-r from-purple-300 to-pink-300  */}
-              <div className="bg-[#202123] max-w-xs h-screen overflow-y-auto md:min-w-[17rem] ">
+              <div className="bg-[#202123] max-w-xs h-screen overflow-y-auto md:min-w-[17rem]">
+                {/*  hidden sm:inline*/}
                 <SideBar />
               </div>
 
