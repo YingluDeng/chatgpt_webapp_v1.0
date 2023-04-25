@@ -28,13 +28,10 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
     - [Model Selection](#model-selection)
     - [Notification Toast](#notification-toast)
     - [Send Message and Get Respond](#send-message-and-get-respond)
-  - [Environment Variables](#key-environment-variables)
-- [Getting](#toolbox-getting-started)
-  - [Prerequisites](#bangbang-prerequisites)
-  - [Installation](#gear-installation)
-  - [Run Locally](#running-run-locally)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [Contact](#handshake-contact)
+  - [Built Environment](#built-environment)
+- [Getting Started](#getting-started)
+- [Useful Resource](#useful-resource)
+- [Developer](#developer)
 <br />
 
 
@@ -106,4 +103,25 @@ The ChatGPT Clone is a web application that boasts a modern, responsive design a
 
 <br />
 
+<!-- Getting Started -->
+## Getting Started
 
+
+
+<br />
+
+<!-- Useful Resource -->
+## Useful Resource
+<li><a href="https://flexboxfroggy.com/" target="_blank">🔗 Learn flexbox.</a></li>
+
+<br />
+
+
+<!-- Developer -->
+## Developer
+Cecilia Deng - https://www.linkedin.com/in/yinglu-cecilia-deng/
+
+Project link - https://chatgpt-webapp-nv.vercel.app/
+
+[(Back to top)](#table-of-contents)
+<br />
