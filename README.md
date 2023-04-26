@@ -190,8 +190,8 @@ FIREBASE_SERVICE_ACCOUNT_KEY
 
 
   
-<!-- Contributor -->
-## Contributor
+<!-- developer -->
+## Developer
 **Cecilia Deng** - https://www.linkedin.com/in/yinglu-cecilia-deng/<br/>
 **Project link** - https://chatgpt-webapp-nv.vercel.app/
 
